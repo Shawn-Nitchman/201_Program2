@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// main fuction that uses a menu to go through options
 int main()
 {
 	int chooseApp;
@@ -14,12 +15,17 @@ int main()
 	cout << " Welcome to the weighted averge application" << endl;
 	cout << "-----------------------------------------------------" << endl;
 
+	// I am reading the files here to me it makes more sense to read the files first so I can save them in the class
 	School.ReadData();
 	School.ReadGrades();
+
+	// this now goes to the menu function that outputs the menu 
 	chooseApp = menu();
 
+	//keep going through the menu until the user enter in 4
 	while (chooseApp != 4)
 	{
+		// use if statements to go into there repected option
 		if (chooseApp == 1)
 		{
 			School.classRoster();
@@ -30,9 +36,9 @@ int main()
 		}
 		else if (chooseApp == 3)
 		{
-			//classRosterWeight();
+			School.classRosterWeight();
 		}
-
+		// will now ask the user again what they want to do
 		chooseApp = menu();
 	}
 	
