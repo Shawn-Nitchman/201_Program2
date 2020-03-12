@@ -62,21 +62,19 @@ void Students::ReadGrades()
 	vector<int> student;
 	int SID, temp;
 	int quiz1, quiz2, test1, test2;
-	string grade;
+	string grade = "nan";
 	unsigned int i;
 	ifstream input;
 
 	input.open("Grades.txt");
 
-	/* Fix Me look at zyBooks vector and classes section to find way to search and assign correct grades to the ID
-	while (!input.eof())
-	{
-		input >> SID >> quiz1 >> quiz2 >> test1 >> test2;
-		grade = "w";
-		currStudent.SetGrades(grade);
+	// Fix Me look at zyBooks vector and classes section to find way to search and assign correct grades to the ID
 
+	for (i = 0; i < AllStudents.size(); i++)
+	{
+		Student& editStudent = AllStudents.at(i);
+		editStudent.SetGrades(grade);
 	}
-	*/
 }
 
 void Students::classRoster() const
