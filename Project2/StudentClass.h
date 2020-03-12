@@ -6,35 +6,54 @@
 
 using namespace std;
 
+
 class Student
 {
 public:
-	void SetFirstName(string fName);
-	void SetLastName(string lName);
-	void SetID(int sNum);
+	// these are my setters I am defining them here since they are only one line of code.
+	void SetFirstName(string fName)
+	{
+		firstName = fName;
+	}
+	void SetLastName(string lName)
+	{
+		lastName = lName;
+	}
+	void SetID(int sNum)
+	{
+		ID = sNum;
+	}
+	void SetFullName(string fulNam)
+	{
+		fullName = fulNam;
+	}
 
-	//void GetFirstName();
-	//void GetLastName();
-	int GetID();
+	// these are my getters I am defining them here since they are only one line of code.
+	string GetFirstName() const { return firstName; }
+	string GetLastName() const { return lastName; }
+	string GetFullName() const { return fullName; }
+	int GetID()const { return ID; }
 
 private:
 	string firstName;
 	string lastName;
+	string fullName;
 	int ID = -1;
 };
+
 
 class Students
 {
 public:
-	void InputStudents();
-	void print();
+	void ReadData();
+	void classRoster() const;
 
 private:
 	vector<Student> AllStudents;
 };
 int menu();
 
-void classRoster();
+
 void classRosterGrade();
 void classRosterWeight();
 

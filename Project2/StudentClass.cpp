@@ -11,8 +11,7 @@ int menu()
 	int choice = 1;
 	while (choice > 0 || choice < 5)
 	{
-		cout << " Welcome to the weighted averge application" << endl;
-		cout << "-----------------------------------------------------" << endl;
+
 		cout << "Please make a selection:" << endl;
 		cout << "(1) Print class roster" << endl;
 		cout << "(2) Print class roster with their grade" << endl;
@@ -33,11 +32,11 @@ int menu()
 	return choice;
 }
 
-void Students::InputStudents()
+void Students::ReadData()
 {
 	Student currStudent;
 	int SID;
-	string last, first;
+	string last, first, fulNam;
 	ifstream input;
 	
 	input.open("INFO.txt");
@@ -45,58 +44,19 @@ void Students::InputStudents()
 	while (!input.eof())
 	{
 		input >> SID >> first >> last;
+		fulNam = last + ", " + first;
+
 		currStudent.SetID(SID);
 		currStudent.SetFirstName(first);
 		currStudent.SetLastName(last);
+		currStudent.SetFullName(fulNam);
 		AllStudents.push_back(currStudent);
-
 	}
 
-}
-/*
-void Student::ReadData()
-{
-	int temp;
-	string first, last;
-	ifstream input;
-	vector<Student> SID;
-	vector<Student> FName;
-	vector<Student> LName;
-	Student currStudent;
-
-	input.open("INFO.txt");
-
-	while (!input.eof())
-	{
-		input >> temp >> first >> last;
-		currStudent.SetID(temp);
-		currStudent.SetFirstName(first);
-		currStudent.SetLastName(last);
-		SID.push_back(currStudent);
-		FName.push_back(currStudent);
-		LName.push_back(currStudent);
-	}
-	
 	input.close();
-
-}
-*/
-void Student::SetID(int sNum)
-{
-	ID = sNum;
 }
 
-void Student::SetFirstName(string fName)
-{
-	firstName = fName;
-}
-
-void Student::SetLastName(string lName)
-{
-	lastName = lName;
-}
-
-void Students::print()
+void Students::classRoster() const
 {
 	Student currStudent;
 	unsigned int i;
@@ -104,11 +64,9 @@ void Students::print()
 	for (i = 0; i < AllStudents.size(); ++i)
 	{
 		currStudent = AllStudents.at(i);
-		cout << currStudent.GetID() <<endl;
+		cout << currStudent.GetID() <<" " << currStudent.GetFullName() <<endl;
+	
 	}
 }
 
-int Student::GetID()
-{
-	return ID;
-}
+

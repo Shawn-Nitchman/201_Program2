@@ -9,18 +9,19 @@ using namespace std;
 int main()
 {
 	int chooseApp;
-	chooseApp = menu();
-
-
 	Students School;
 
-	School.InputStudents();
+	cout << " Welcome to the weighted averge application" << endl;
+	cout << "-----------------------------------------------------" << endl;
+
+	School.ReadData();
+	chooseApp = menu();
 
 	while (chooseApp != 4)
 	{
 		if (chooseApp == 1)
 		{
-			School.print();
+			School.classRoster();
 		}
 		else if (chooseApp == 2)
 		{
