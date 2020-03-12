@@ -15,6 +15,7 @@ int main()
 	cout << "-----------------------------------------------------" << endl;
 
 	School.ReadData();
+	School.ReadGrades();
 	chooseApp = menu();
 
 	while (chooseApp != 4)
@@ -25,7 +26,7 @@ int main()
 		}
 		else if (chooseApp == 2)
 		{
-			//classRosterGrade();
+			School.classRosterGrade();
 		}
 		else if (chooseApp == 3)
 		{

@@ -56,6 +56,29 @@ void Students::ReadData()
 	input.close();
 }
 
+void Students::ReadGrades()
+{
+	Student currStudent;
+	vector<int> student;
+	int SID, temp;
+	int quiz1, quiz2, test1, test2;
+	string grade;
+	unsigned int i;
+	ifstream input;
+
+	input.open("Grades.txt");
+
+	/* Fix Me look at zyBooks vector and classes section to find way to search and assign correct grades to the ID
+	while (!input.eof())
+	{
+		input >> SID >> quiz1 >> quiz2 >> test1 >> test2;
+		grade = "w";
+		currStudent.SetGrades(grade);
+
+	}
+	*/
+}
+
 void Students::classRoster() const
 {
 	Student currStudent;
@@ -69,4 +92,15 @@ void Students::classRoster() const
 	}
 }
 
+void Students::classRosterGrade() const
+{
+	Student currStudent;
+	unsigned int i;
+
+	for (i = 0; i < AllStudents.size(); ++i)
+	{
+		currStudent = AllStudents.at(i);
+		cout << currStudent.GetFullName() << ": " << currStudent.GetGrades() << endl;
+	}
+}
 

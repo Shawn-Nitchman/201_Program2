@@ -1,4 +1,11 @@
 ﻿  Main.cpp
   StudentClass.cpp
+\\kc.umkc.edu\kc-users\home\s\smng47\my documents\program2\project2\studentclass.cpp(64): warning C4101: 'test1': unreferenced local variable
+\\kc.umkc.edu\kc-users\home\s\smng47\my documents\program2\project2\studentclass.cpp(64): warning C4101: 'quiz1': unreferenced local variable
+\\kc.umkc.edu\kc-users\home\s\smng47\my documents\program2\project2\studentclass.cpp(63): warning C4101: 'SID': unreferenced local variable
+\\kc.umkc.edu\kc-users\home\s\smng47\my documents\program2\project2\studentclass.cpp(66): warning C4101: 'i': unreferenced local variable
+\\kc.umkc.edu\kc-users\home\s\smng47\my documents\program2\project2\studentclass.cpp(64): warning C4101: 'test2': unreferenced local variable
+\\kc.umkc.edu\kc-users\home\s\smng47\my documents\program2\project2\studentclass.cpp(63): warning C4101: 'temp': unreferenced local variable
+\\kc.umkc.edu\kc-users\home\s\smng47\my documents\program2\project2\studentclass.cpp(64): warning C4101: 'quiz2': unreferenced local variable
   Generating Code...
   Project2.vcxproj -> \\kc.umkc.edu\kc-users\home\s\smng47\My Documents\Program2\x64\Debug\Project2.exe
