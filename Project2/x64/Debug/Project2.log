@@ -1,5 +1,6 @@
 ﻿  Main.cpp
+\\kc.umkc.edu\kc-users\home\s\smng47\my documents\program2\project2\studentclass.h(62): warning C4244: 'return': conversion from 'const double' to 'int', possible loss of data
   StudentClass.cpp
-c:\users\shawn nitchman\documents\program2\project2\studentclass.cpp(155): error C2039: 'FindAverage': is not a member of 'Student'
-  c:\users\shawn nitchman\documents\program2\project2\studentclass.h(10): note: see declaration of 'Student'
+\\kc.umkc.edu\kc-users\home\s\smng47\my documents\program2\project2\studentclass.h(62): warning C4244: 'return': conversion from 'const double' to 'int', possible loss of data
   Generating Code...
+  Project2.vcxproj -> \\kc.umkc.edu\kc-users\home\s\smng47\My Documents\Program2\x64\Debug\Project2.exe

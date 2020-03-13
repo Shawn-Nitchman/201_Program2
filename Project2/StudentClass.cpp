@@ -112,6 +112,30 @@ void Students::ReadGrades()
 	input.close();
 }
 
+// this function takes the grades and then calculates the weighted grade
+void Students::FindAverage()
+{
+	// this now access the class of student where all the data is held
+	Student currStudent;
+	double finalAvg = 5.0;
+	double quiz1, quiz2, test1, test2;
+	unsigned int i;
+
+	for (i = 0; i < AllStudents.size(); ++i)
+	{
+		Student& editStudent = AllStudents.at(i);
+
+		quiz1 = editStudent.GetQuiz1();
+		quiz2 = editStudent.GetQuiz2();
+		test1 = editStudent.GetTest1();
+		test2 = editStudent.GetTest2();
+
+		finalAvg = ((quiz1 * 10 + quiz2 * 10) / 2) * 0.25 + test1 * 0.25 + test2 * 0.50;
+
+		editStudent.SetAverage(finalAvg);
+	}
+}
+
 // this function prints out the class roster with no grades it is a const becuase it should only output
 void Students::classRoster() const
 {
@@ -143,26 +167,17 @@ void Students::classRosterGrade() const
 	}
 }
 
+// this funtion is to output the final grade
 void Students::classRosterWeight() const
 {
 	Student currStudent;
-	int i;
-	double avg = 0.0;
-
+	unsigned int i;
 
 	for (i = 0; i < AllStudents.size(); ++i)
 	{
-		cout << "Weighted average score of " << currStudent.GetFullName() << " is       " << FindAverage(i) << " out of 100%" << endl;
+		currStudent = AllStudents.at(i);
+
+		cout << "Weighted average score of " << currStudent.GetFullName() << " is       " << currStudent.GetAverage() << " out of 100%" << endl;
 	}
-}
-
-double Students::FindAverage(int index)
-{
-	Student currStudent;
-	double x;
-
-	currStudent = AllStudents.at(1);
-	x = currStudent.GetID();
-	return x;
 }
 

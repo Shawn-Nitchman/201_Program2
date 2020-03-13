@@ -44,7 +44,7 @@ public:
 	{
 		Test2 = test2;
 	}
-	void SetAverage(int avg)
+	void SetAverage(double avg)
 	{
 		Average = avg;
 	}
@@ -61,7 +61,6 @@ public:
 	int GetTest2() const { return Test2; }
 	int GetAverage() const { return Average; }
 
-	
 
 private:
 	string firstName;
@@ -73,7 +72,7 @@ private:
 	int Quiz2 = 0;
 	int Test1 = 0;
 	int Test2 = 0;
-	int Average = 0;
+	double Average = 0.0;
 };
 
 // this class works off my first class of Students this helps keeps the code clean and stores the vector of all the students
@@ -82,12 +81,11 @@ class Students
 public:
 	void ReadData();
 	void ReadGrades();
+	void FindAverage();
 
 	void classRoster() const;
 	void classRosterGrade() const;
 	void classRosterWeight() const;
-
-	double FindAverage(int index);
 
 private:
 	vector<Student> AllStudents;

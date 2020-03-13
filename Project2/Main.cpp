@@ -36,6 +36,8 @@ int main()
 		}
 		else if (chooseApp == 3)
 		{
+			// calling find averge since it only needs to be calulated if the user enters in 3
+			School.FindAverage();
 			School.classRosterWeight();
 		}
 		// will now ask the user again what they want to do
