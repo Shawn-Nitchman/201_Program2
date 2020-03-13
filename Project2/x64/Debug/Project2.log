@@ -1,5 +1,5 @@
 ﻿  Main.cpp
   StudentClass.cpp
-\\kc.umkc.edu\kc-users\home\s\smng47\my documents\program2\project2\studentclass.cpp(155): error C2662: 'double Students::FindAverage(int)': cannot convert 'this' pointer from 'const Students' to 'Students &'
-  \\kc.umkc.edu\kc-users\home\s\smng47\my documents\program2\project2\studentclass.cpp(155): note: Conversion loses qualifiers
+c:\users\shawn nitchman\documents\program2\project2\studentclass.cpp(155): error C2039: 'FindAverage': is not a member of 'Student'
+  c:\users\shawn nitchman\documents\program2\project2\studentclass.h(10): note: see declaration of 'Student'
   Generating Code...

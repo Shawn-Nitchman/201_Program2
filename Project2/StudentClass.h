@@ -61,6 +61,7 @@ public:
 	int GetTest2() const { return Test2; }
 	int GetAverage() const { return Average; }
 
+	
 
 private:
 	string firstName;
@@ -82,11 +83,11 @@ public:
 	void ReadData();
 	void ReadGrades();
 
-	double  FindAverage(int index);
-
 	void classRoster() const;
 	void classRosterGrade() const;
 	void classRosterWeight() const;
+
+	double FindAverage(int index);
 
 private:
 	vector<Student> AllStudents;

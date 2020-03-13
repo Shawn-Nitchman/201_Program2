@@ -147,31 +147,22 @@ void Students::classRosterWeight() const
 {
 	Student currStudent;
 	int i;
-	double avg;
+	double avg = 0.0;
+
 
 	for (i = 0; i < AllStudents.size(); ++i)
 	{
-		Student& editStudent = AllStudents.at(i);
-		avg = FindAverage();
-		currStudent = AllStudents.at(i);
-		cout << "Weighted average score of " << currStudent.GetFullName() << " is       " << avg << " out of 100%" << endl;
+		cout << "Weighted average score of " << currStudent.GetFullName() << " is       " << FindAverage(i) << " out of 100%" << endl;
 	}
 }
 
 double Students::FindAverage(int index)
 {
 	Student currStudent;
-	double quiz1, quiz2, test1, test2, finalGrade;
-	const double quiz1Weight = 0.25, quiz2Weight = 0.25, test1Weight = 0.25, test2Weight = 0.50;
+	double x;
 
-	currStudent = AllStudents.at(index);
-
-	quiz1 = currStudent.GetQuiz1() * quiz1Weight;
-	quiz2 = currStudent.GetQuiz2() * quiz2Weight;
-	test1 = currStudent.GetTest1() * test1Weight;
-	test2 = currStudent.GetTest2() * test2Weight;
-
-	finalGrade = quiz1 + quiz2 + test1 + test2;
-	return finalGrade;
+	currStudent = AllStudents.at(1);
+	x = currStudent.GetID();
+	return x;
 }
 
